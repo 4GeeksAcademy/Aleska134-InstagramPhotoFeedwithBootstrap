@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/5d9f436a27.js" crossorigin="anonymous"></script>
+        <!-- Google Font -->
+    <link href=“https://fonts.googleapis.com/css?family=Ubuntu” rel=“stylesheet”>
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+      
+        <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+    <title>Aleska134-Instagram Feed with Bootstrap</title>
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-sm d-block position-relative">
+        <div class="container-fluid">
+                <a class="navbar-brand ms-2" href="#">
+                <i class="fa-brands fa-instagram"></i>&nbsp;Instagram
+                    <form>
+                        <div class="d-sm-flex">
+
+                            <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-outline-success bg-success text-light " data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>   
+                            <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Caption: </p>
+                                                <div class="form-floating">
+                                                    <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea" style="height: 100px"></textarea>
+                                                    <label for="floatingTextarea">Add the caption of your post here</label>
+                                                    </div>
+                                                <div class="col pt-2">
+                                                    <button class="btn btn-primary btn-sm rounded bg-light border-0" data-bs-display="static"><i class="fa-solid fa-camera" style="color: #000000;"></i></button>&nbsp;<button class="btn btn-primary btn-sm rounded bg-light border-0"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary bg-success">Publish</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                        <!-- Dropdown link -->
+                       
+                          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link bg-secondary text-light dropdown-toggle border-0 rounded position-absolute top-0 end-0" href="#" role="button" id="dropdownMenulink" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"><i class="fa-solid fa-gear" style="color: #ffffff;"></i></i></a> 
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                                <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                                                    <div class="col border-top border-dark">
+                                                        <li><a class="dropdown-item text-danger m-1" href="#">log out</a></li>
+                                                    </div>
+                                            </ul>
+                                    </li>
+                                </ul>
+                          </div>
+                        </div>
+                    </form>     
+                </div>
+    </nav>
+
+    <!-- center icons  -->
+    <div class="container d-block">
+        <div class="row align-items-start">
+            <div class="col-sm-2"> </div>
+            <div class="col-10 ms-auto d-block">
+                <form class="d-flex gap-3 col-4 mx-auto">
+                    <p>
+                    <button class="btn btn-outline bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse"><i class="fa-solid fa-table-cells" style="color: #9e9e9e;"></i></button>&nbsp;   
+                    <button class="btn btn-outline bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1"><i class="fa-solid fa-square" style="color: #9e9e9e;"></i></button>  
+                    </p>
+                </form>
+            </div>
+            <div class="col-sm-0"></div>
+        </div>    
+    </div>
+
+    <!-- posts collapse 1-->
+    <div class="container-fluid d-block"> 
+        <div class="collapse" id="collapse">
+            <div class="card card-body border-0">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="container">
+                            <img src="./img/cat.jpg" class="w-100 p-4 h-9 image-fluid responsive" alt="3px">
+                        </div>  
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="container">
+                            <img src="./img/img1.jpg" class="image-fluid w-100 p-4" alt="3px">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="container">
+                            <img src="./img/dogs.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="container">
+                        <img src="./img/escritorio 2.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="container">
+                        <img src="./img/escritorio 4.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="container">
+                        <img src="./img/img2.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="container">
+                        <img src="./img/img3.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="container">
+                        <img src="./img/img4.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="container">
+                        <img src="./img/img5.jpg" class="w-100 p-4 h-9 image-fluid" alt="3px">
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div>
+</div>
+<!-- end collapse1 -->
+<!-- Collapse 2 -->
+<div class="collapse" id="collapse1">
+    <div class="card card-body border-0 d-block">
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Pretty cat!</h1>
+                            <p class="col text-muted text-end">12/14</p>
+                        </div>
+                            <img src="./img/cat.jpg" class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>200 likes</b></p>
+                            <p mp-8px>This is my first photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">New York!</h1>
+                            <p class="col text-muted text-end ">01/19</p>
+                        </div>
+                        <img src="./img/img1.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>300 likes</b></p>
+                            <p mp-8px>This is my 2nd photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Beautiful!</h1>
+                            <p class="col text-muted text-end">02/14</p>
+                        </div>
+                        <img src="./img/dogs.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>220 likes</b></p>
+                            <p mp-8px>This is my 3rd photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Galaxy</h1>
+                            <p class="col text-muted text-end">03/19</p>
+                        </div>
+                        <img src="./img/escritorio 2.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>200 likes</b></p>
+                            <p mp-8px>This is my 4th photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Enchanted</h1>
+                            <p class="col text-muted text-end">04/22</p>
+                        </div>
+                        <img src="./img/escritorio 4.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>245 likes</b></p>
+                            <p mp-8px>This is my 5th photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Paris!</h1>
+                            <p class="col text-muted text-end">06/13</p>
+                        </div>
+                        <img src="./img/img2.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>200 likes</b></p>
+                            <p mp-8px>This is my 6th photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">OMG!</h1>
+                            <p class="col text-muted text-end">08/25</p>
+                        </div>
+                        <img src="./img/img3.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>100 likes</b></p>
+                            <p mp-8px>This is my 7th photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Love this!</h1>
+                            <p class="col text-muted text-end">9/10</p>
+                        </div>
+                        <img src="./img/img4.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>290 likes</b></p>
+                            <p mp-8px>This is my 8th photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+
+            <div class="row align-items-start">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="container border border-light">
+                        <div class="row mt-3">
+                            <h1 class="col">Amazing!</h1>
+                            <p class="col text-muted text-end">11/21</p>
+                        </div>
+                        <img src="./img/img5.jpg"  class="w-100 px-0 py-4 h-9 image-fluid" alt="3px">
+                        <div class="row">
+                            <p><b>200 likes</b></p>
+                            <p mp-8px>This is my 9th photo of the feed. This is a multi line comment for testing purposes. Im learning to code with #Breathcode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+    </div>
+</div> 
+<!-- eop -->
+</body>
+</html>
